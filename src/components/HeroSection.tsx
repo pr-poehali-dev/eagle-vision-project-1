@@ -176,10 +176,65 @@ export default function HeroSection() {
         </div>
       </section>
 
+      {/* Sources Section */}
+      <section id="sources" className="bg-zinc-950 px-8 py-24 md:px-16">
+        <div className="container mx-auto max-w-5xl">
+          <div className="mb-16 text-center">
+            <p className="mb-3 text-sm font-medium uppercase tracking-widest text-amber-400">Литература</p>
+            <h2 className="text-3xl font-bold text-white md:text-5xl">Источники</h2>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            {[
+              {
+                num: 1,
+                author: 'Корен С.',
+                title: 'Интеллект собак: поведение животных и высшая нервная деятельность',
+                year: '1994',
+                note: 'Основа классификации пород по обучаемости',
+              },
+              {
+                num: 2,
+                author: 'Мech Л. Д., Бойтани Л.',
+                title: 'Wolves: Behavior, Ecology, and Conservation',
+                year: '2003',
+                note: 'Эволюционные корни поведения домашних собак',
+              },
+              {
+                num: 3,
+                author: 'Американский кинологический клуб (AKC)',
+                title: 'Dog Breed Intelligence Rankings',
+                year: '2023',
+                note: 'akc.org — официальный рейтинг пород',
+              },
+              {
+                num: 4,
+                author: 'Horowitz A.',
+                title: 'Inside of a Dog: What Dogs See, Smell, and Know',
+                year: '2009',
+                note: 'Когнитивные способности собак',
+              },
+            ].map((src) => (
+              <div key={src.num} className="flex gap-5 rounded-xl border border-white/10 bg-white/5 p-6">
+                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber-400/10 text-sm font-bold text-amber-400">
+                  {src.num}
+                </span>
+                <div>
+                  <p className="font-medium text-white">
+                    {src.author} — <span className="italic text-white/80">{src.title}</span> ({src.year})
+                  </p>
+                  <p className="mt-1 text-sm text-white/40">{src.note}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-white/10 bg-zinc-950 px-8 py-10 text-center">
         <p className="text-white/40 text-sm">
-          Школьный исследовательский проект · 2026
+          Школьный исследовательский проект · Гаценко Руслан · 2026
         </p>
       </footer>
     </>
